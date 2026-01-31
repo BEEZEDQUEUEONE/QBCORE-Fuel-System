@@ -4,7 +4,7 @@ Config = {}
 Config.FuelDecor = "_FUEL_LEVEL"
 Config.FuelPrice = 3 -- Price per liter
 Config.RefuelSpeed = 1.5 -- Liters per second
-Config.FuelConsumption = 0.8 -- Base fuel consumption rate (lower = less consumption)
+Config.FuelConsumption = 3.0 -- Base fuel consumption rate (lower = less consumption)
 
 -- Jerrycan Settings
 Config.JerryCanCapacity = 20 -- Liters
