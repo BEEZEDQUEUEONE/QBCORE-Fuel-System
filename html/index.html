@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fuel System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fuel HUD -->
+    <div id="fuel-hud" class="hidden">
+        <div class="fuel-container">
+            <div class="fuel-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19.77,7.23L19.78,7.22L16.06,3.5L15,4.56L17.11,6.67C16.17,7.03 15.5,7.93 15.5,9A2.5,2.5 0 0,0 18,11.5C18.36,11.5 18.69,11.42 19,11.29V18.5A1,1 0 0,1 18,19.5A1,1 0 0,1 17,18.5V14A2,2 0 0,0 15,12H14V5A2,2 0 0,0 12,3H6A2,2 0 0,0 4,5V21H14V13.5H15.5V18.5A2.5,2.5 0 0,0 18,21A2.5,2.5 0 0,0 20.5,18.5V9C20.5,8.31 20.22,7.68 19.77,7.23M18,10A1,1 0 0,1 17,9A1,1 0 0,1 18,8A1,1 0 0,1 19,9A1,1 0 0,1 18,10M6,5H12V11H6V5Z"/>
+                </svg>
+            </div>
+            <div class="fuel-bar-container">
+                <div class="fuel-bar" id="fuel-bar">
+                    <div class="fuel-shine"></div>
+                </div>
+            </div>
+            <div class="fuel-text" id="fuel-text">100%</div>
+        </div>
+    </div>
+
+    <!-- Refuel UI -->
+    <div id="refuel-ui" class="hidden">
+        <div class="refuel-container">
+            <div class="refuel-header">
+                <div class="refuel-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.77,7.23L19.78,7.22L16.06,3.5L15,4.56L17.11,6.67C16.17,7.03 15.5,7.93 15.5,9A2.5,2.5 0 0,0 18,11.5C18.36,11.5 18.69,11.42 19,11.29V18.5A1,1 0 0,1 18,19.5A1,1 0 0,1 17,18.5V14A2,2 0 0,0 15,12H14V5A2,2 0 0,0 12,3H6A2,2 0 0,0 4,5V21H14V13.5H15.5V18.5A2.5,2.5 0 0,0 18,21A2.5,2.5 0 0,0 20.5,18.5V9C20.5,8.31 20.22,7.68 19.77,7.23M18,10A1,1 0 0,1 17,9A1,1 0 0,1 18,8A1,1 0 0,1 19,9A1,1 0 0,1 18,10M6,5H12V11H6V5Z"/>
+                    </svg>
+                </div>
+                <div class="refuel-title" id="refuel-title">REFUELING</div>
+            </div>
+            
+            <div class="refuel-progress-container">
+                <div class="refuel-progress" id="refuel-progress">
+                    <div class="refuel-shine"></div>
+                </div>
+                <div class="refuel-percentage" id="refuel-percentage">0%</div>
+            </div>
+            
+            <div class="refuel-info">
+                <div class="info-item">
+                    <span class="info-label">CURRENT</span>
+                    <span class="info-value" id="current-fuel">0%</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">TARGET</span>
+                    <span class="info-value">100%</span>
+                </div>
+            </div>
+            
+            <div class="refuel-instructions">
+                Press <span class="key">BACKSPACE</span> to cancel
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
