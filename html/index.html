@@ -12,18 +12,27 @@
 <body>
     <!-- Fuel HUD -->
     <div id="fuel-hud" class="hidden">
-        <div class="fuel-container">
-            <div class="fuel-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M19.77,7.23L19.78,7.22L16.06,3.5L15,4.56L17.11,6.67C16.17,7.03 15.5,7.93 15.5,9A2.5,2.5 0 0,0 18,11.5C18.36,11.5 18.69,11.42 19,11.29V18.5A1,1 0 0,1 18,19.5A1,1 0 0,1 17,18.5V14A2,2 0 0,0 15,12H14V5A2,2 0 0,0 12,3H6A2,2 0 0,0 4,5V21H14V13.5H15.5V18.5A2.5,2.5 0 0,0 18,21A2.5,2.5 0 0,0 20.5,18.5V9C20.5,8.31 20.22,7.68 19.77,7.23M18,10A1,1 0 0,1 17,9A1,1 0 0,1 18,8A1,1 0 0,1 19,9A1,1 0 0,1 18,10M6,5H12V11H6V5Z"/>
-                </svg>
-            </div>
-            <div class="fuel-bar-container">
-                <div class="fuel-bar" id="fuel-bar">
-                    <div class="fuel-shine"></div>
+        <div class="hud-container">
+            <!-- Fuel Display -->
+            <div class="hud-item fuel-display">
+                <div class="fuel-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12,2C9.24,2 7,4.24 7,7C7,9.85 9.92,14.21 11.39,16.39C11.72,16.9 12.28,16.9 12.61,16.39C14.08,14.21 17,9.85 17,7C17,4.24 14.76,2 12,2M12,9.5A2.5,2.5 0 0,1 9.5,7A2.5,2.5 0 0,1 12,4.5A2.5,2.5 0 0,1 14.5,7A2.5,2.5 0 0,1 12,9.5Z"/>
+                    </svg>
                 </div>
+                <div class="hud-value" id="fuel-text">100</div>
             </div>
-            <div class="fuel-text" id="fuel-text">100%</div>
+            
+            <!-- Speedometer Display -->
+            <div class="hud-item speed-display">
+                <div class="speed-icon">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12,16A3,3 0 0,1 9,13C9,11.88 9.61,10.9 10.5,10.39L20.21,4.77L14.68,14.35C14.18,15.33 13.17,16 12,16M12,3C13.81,3 15.5,3.5 16.97,4.32L14.87,5.53C14,5.19 13,5 12,5A8,8 0 0,0 4,13C4,15.21 4.89,17.21 6.34,18.65H6.35C6.74,19.04 6.74,19.67 6.35,20.06C5.96,20.45 5.32,20.45 4.93,20.07V20.07C3.12,18.26 2,15.76 2,13A10,10 0 0,1 12,3M22,13C22,15.76 20.88,18.26 19.07,20.07V20.07C18.68,20.45 18.05,20.45 17.66,20.06C17.27,19.67 17.27,19.04 17.66,18.65V18.65C19.11,17.21 20,15.21 20,13C20,12 19.81,11 19.46,10.1L20.67,8C21.5,9.5 22,11.18 22,13Z"/>
+                    </svg>
+                </div>
+                <div class="hud-value" id="speed-text">0</div>
+                <div class="hud-unit">MPH</div>
+            </div>
         </div>
     </div>
 

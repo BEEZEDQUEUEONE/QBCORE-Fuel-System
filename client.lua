@@ -181,10 +181,14 @@ CreateThread(function()
                     local model = GetEntityModel(vehicle)
                     local isElectric = IsElectricVehicle(model)
                     
+                    -- Get speed (convert from m/s to MPH)
+                    local speed = GetEntitySpeed(vehicle) * 2.236936
+                    
                     SendNUIMessage({
                         action = "updateHUD",
                         show = true,
                         fuel = math.floor(fuel),
+                        speed = math.floor(speed),
                         isElectric = isElectric
                     })
                 else
