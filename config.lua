@@ -4,7 +4,11 @@ Config = {}
 Config.FuelDecor = "_FUEL_LEVEL"
 Config.FuelPrice = 3 -- Price per liter
 Config.RefuelSpeed = 1.5 -- Liters per second
-Config.FuelConsumption = 3.0 -- Base fuel consumption rate (lower = less consumption)
+Config.FuelConsumption = 18.0 -- Base fuel consumption rate (lower = less consumption)
+
+-- HUD Settings
+Config.HUDSize = "small" -- "small" or "big" - small matches base QBCore stats size
+Config.HUDPosition = "minimap" -- Position near minimap (bottom-left)
 
 -- Jerrycan Settings
 Config.JerryCanCapacity = 20 -- Liters

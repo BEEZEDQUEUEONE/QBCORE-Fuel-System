@@ -16,21 +16,21 @@ body {
 /* Fuel HUD Styles */
 #fuel-hud {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 18px;
+    left: 18px;
     z-index: 100;
 }
 
 .hud-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    animation: slideInRight 0.4s ease-out;
+    gap: 6px;
+    animation: slideInLeft 0.4s ease-out;
 }
 
-@keyframes slideInRight {
+@keyframes slideInLeft {
     from {
-        transform: translateX(100px);
+        transform: translateX(-100px);
         opacity: 0;
     }
     to {
@@ -39,24 +39,40 @@ body {
     }
 }
 
+/* Small Mode (Default - matches base QBCore) */
 .hud-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    background: rgba(0, 0, 0, 0.85);
-    padding: 10px 16px;
-    border-radius: 8px;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 6px 12px;
+    border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+/* Big Mode */
+.hud-container.big .hud-item {
+    padding: 10px 16px;
+    gap: 10px;
+    min-width: 100px;
 }
 
 .fuel-icon,
 .speed-icon {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     color: rgba(255, 255, 255, 0.7);
     transition: color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.hud-container.big .fuel-icon,
+.hud-container.big .speed-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .fuel-display .fuel-icon {
@@ -73,19 +89,28 @@ body {
 
 .hud-value {
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     color: #ffffff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    min-width: 40px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    min-width: 30px;
     text-align: right;
+}
+
+.hud-container.big .hud-value {
+    font-size: 18px;
+    min-width: 40px;
 }
 
 .hud-unit {
     font-weight: 400;
-    font-size: 12px;
+    font-size: 10px;
     color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+.hud-container.big .hud-unit {
+    font-size: 12px;
 }
 
 /* Pulsing animation for low fuel */

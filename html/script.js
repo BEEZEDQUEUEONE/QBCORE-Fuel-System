@@ -19,12 +19,21 @@ function updateHUD(data) {
     const fuelText = document.getElementById('fuel-text');
     const speedText = document.getElementById('speed-text');
     const fuelDisplay = document.querySelector('.fuel-display');
+    const hudContainer = document.querySelector('.hud-container');
     
     if (data.show) {
         fuelHUD.classList.remove('hidden');
         
         const fuel = Math.max(0, Math.min(100, data.fuel));
-        fuelText.textContent = Math.floor(fuel);
+        
+        // Add % symbol in big mode
+        if (data.hudSize === 'big') {
+            fuelText.textContent = Math.floor(fuel) + '%';
+            hudContainer.classList.add('big');
+        } else {
+            fuelText.textContent = Math.floor(fuel);
+            hudContainer.classList.remove('big');
+        }
         
         // Update speed if provided
         if (data.speed !== undefined) {
@@ -41,9 +50,6 @@ function updateHUD(data) {
         } else if (fuel <= 50) {
             fuelDisplay.classList.add('medium');
         }
-        
-        // Update icon for electric vehicles (keep same icon, just change context)
-        // Electric vehicles will use the same droplet icon
     } else {
         fuelHUD.classList.add('hidden');
     }

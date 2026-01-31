@@ -189,7 +189,8 @@ CreateThread(function()
                         show = true,
                         fuel = math.floor(fuel),
                         speed = math.floor(speed),
-                        isElectric = isElectric
+                        isElectric = isElectric,
+                        hudSize = Config.HUDSize or "small"
                     })
                 else
                     SendNUIMessage({
