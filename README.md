@@ -30,23 +30,27 @@ A comprehensive fuel system for FiveM servers running QBCore Framework with a cl
 - Separate pricing for fuel and electricity
 
 🎨 **Clean UI**
-
-- Modern, sleek fuel gauge
-- Animated refueling interface
-- Color-coded fuel levels (green → yellow → red)
-- Smooth animations and transitions
-- Electric vehicle specific UI elements
+# Modern, sleek fuel gauge
+# Animated refueling interface
+- # Color-coded fuel levels (green → yellow → red)
+- # Smooth animations and transitions
+- # Electric vehicle specific UI elements
 
 ## Installation
 
-### Step 1: Download and Extract
-1. Download the fuel system files
-2. Extract the `fivem-fuel` folder
-3. Rename it to your preference (e.g., `qb-fuel`)
+### Step 1: Download from GitHub
+1. Go to the repository: https://github.com/BEEZEDQUEUEONE/QBCORE-Fuel-System
+2. Click the green **Code** button
+3. Select **Download ZIP**
+4. Extract the ZIP file - you'll get a folder named `QBCORE-Fuel-System-main`
 
-### Step 2: Add to Server Resources
-1. Copy the renamed folder to your server's `resources` directory
+### Step 2: Rename and Move to Server
+1. Rename `QBCORE-Fuel-System-main` to `qb-fuel` (or your preferred name)
+2. Copy the renamed folder to your server's `resources` directory
    - Example path: `server/resources/[qb]/qb-fuel/`
+3. Verify all files are present inside the folder:
+   - `fxmanifest.lua`, `config.lua`, `client.lua`, `server.lua`, `README.md`
+   - `html/` folder containing `index.html`, `style.css`, `script.js`
 
 ### Step 3: Configure server.cfg
 1. Open your `server.cfg` file
@@ -187,145 +191,4 @@ For issues or questions, please create an issue on the GitHub repository.
 
 ## License
 
-Free to use and modify for your FiveM server.
-
-## Publishing to GitHub
-
-### Prerequisites
-- Git installed on your computer
-- GitHub account created
-- All files tested and working on your server
-
-### Step 1: Initialize Git Repository
-
-1. Open PowerShell/Terminal in the `fivem-fuel` folder
-2. Initialize git repository:
-   ```bash
-   git init
-   ```
-
-3. Create a `.gitignore` file (optional but recommended):
-   ```bash
-   New-Item .gitignore
-   ```
-
-4. Add this to `.gitignore`:
-   ```
-   # OS Files
-   .DS_Store
-   Thumbs.db
-   
-   # IDE Files
-   .vscode/
-   .idea/
-   
-   # Backup files
-   *.bak
-   *~
-   ```
-
-### Step 2: Create GitHub Repository
-
-1. Go to [GitHub.com](https://github.com)
-2. Click the **+** icon in top-right corner
-3. Select **New repository**
-4. Fill in repository details:
-   - **Name**: `qb-fuel` (or your preferred name)
-   - **Description**: "QBCore Fuel System with modern UI for FiveM"
-   - **Public** or **Private**: Choose based on preference
-   - **DO NOT** initialize with README (you already have one)
-5. Click **Create repository**
-
-### Step 3: Verify Files Locally
-
-Make sure all files are present:
-```bash
-Get-ChildItem -Recurse
-```
-
-You should see:
-- `fxmanifest.lua`
-- `config.lua`
-- `client.lua`
-- `server.lua`
-- `README.md`
-- `html/index.html`
-- `html/style.css`
-- `html/script.js`
-
-### Step 4: Commit Files
-
-1. Add all files to staging:
-   ```bash
-   git add .
-   ```
-
-2. Commit with message:
-   ```bash
-   git commit -m "Initial commit: QBCore fuel system with modern UI"
-   ```
-
-### Step 5: Push to GitHub
-
-1. Add remote repository (replace `YOUR_USERNAME` and `REPO_NAME`):
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
-   ```
-
-2. Rename branch to main (if needed):
-   ```bash
-   git branch -M main
-   ```
-
-3. Push to GitHub:
-   ```bash
-   git push -u origin main
-   ```
-
-4. Enter your GitHub credentials when prompted
-
-### Step 6: Verify Upload
-
-1. Go to your GitHub repository URL
-2. Verify all files are visible
-3. Check that README displays correctly
-4. Test clone/download functionality
-
-### Step 7: Add Release (Optional)
-
-1. Go to your repository on GitHub
-2. Click **Releases** on the right sidebar
-3. Click **Create a new release**
-4. Fill in:
-   - **Tag version**: `v1.0.0`
-   - **Release title**: `Initial Release - QBCore Fuel System`
-   - **Description**: List features and installation notes
-5. Click **Publish release**
-
-### Updating the Repository
-
-When you make changes:
-
-```bash
-# Check what changed
-git status
-
-# Add changes
-git add .
-
-# Commit with descriptive message
-git commit -m "Description of changes"
-
-# Push to GitHub
-git push
-```
-
-### Repository Best Practices
-
-- ✅ Write clear commit messages
-- ✅ Test all changes before pushing
-- ✅ Update version numbers in releases
-- ✅ Keep README.md up to date
-- ✅ Respond to issues and pull requests
-- ✅ Add screenshots/videos to README (optional)
-- ✅ Include changelog for updates
+Free to use for your FiveM server, but do not modify or redistribute.
